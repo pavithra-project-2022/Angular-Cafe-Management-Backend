@@ -106,7 +106,7 @@ router.post("/forgotPassword", (req, res) => {
   });
 });
 
-router.get("/get", auth.authenticateToken, checkRole.checkRole, (req, res) => {
+router.get("/get", (req, res) => {
   var query1 =
     "select id,name,email,contactNumber,status from user where role='user'";
   connection.query(query1, (err, results) => {
