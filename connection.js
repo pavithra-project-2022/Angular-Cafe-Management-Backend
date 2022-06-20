@@ -12,12 +12,12 @@ var connection = mysql.createPool({
 
 
 
-// connection.connect((error) => {
-//   if (!error) {
-//     console.log("Connected to MySQL Server!!!");
-//   } else {
-//     console.log(error);
-//   }
-// });
+connection.getConnection((error) => {
+  if (!error) {
+    console.log("Connected to MySQL Server!!!");
+  } else {
+    console.log(error);
+  }
+});
 
 module.exports = connection
