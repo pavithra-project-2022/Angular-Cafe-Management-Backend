@@ -10,12 +10,14 @@ var connection = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
-connection.connect((error) => {
-  if (!error) {
-    console.log("Connected to MySQL Server!!!");
-  } else {
-    console.log(error);
-  }
-});
+
+
+// connection.connect((error) => {
+//   if (!error) {
+//     console.log("Connected to MySQL Server!!!");
+//   } else {
+//     console.log(error);
+//   }
+// });
 
 module.exports = connection
