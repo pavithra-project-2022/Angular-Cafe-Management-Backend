@@ -33,4 +33,8 @@ app.use('/bill',billRoute)
 app.use('/dashboard',dashboardRoute)
 
 
-module.exports = app;
+// module.exports = app;
+
+app.listen(process.env.PORT || 8000,()=>{
+    console.log("Server is running at 8000");
+})
