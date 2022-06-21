@@ -87,7 +87,7 @@ router.post("/forgotPassword", (req, res) => {
           from: process.env.EMAIL,
           to: results[0].email,
           subject: "Password by Cafe Management System",
-          html: `<p><b>Your Login details for Cafe Management System</b><br/><b>Email: </b>${results[0].email}<br/><b>Password: </b>${results[0].password}<br/><a href="http://localhost:4200/">Click here to login</p>`,
+          html: `<p><b>Your Login details for Cafe Management System</b><br/><b>Email: </b>${results[0].email}<br/><b>Password: </b>${results[0].password}<br/><a href="https://angular-cafe-management.netlify.app/">Click here to login</p>`,
         };
         transporter.sendMail(mailOptions, function (error, info) {
           if (error) {
