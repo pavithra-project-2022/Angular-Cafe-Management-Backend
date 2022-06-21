@@ -20,4 +20,10 @@ app.use('/bill',billRoute)
 app.use('/dashboard',dashboardRoute)
 
 
-module.exports = app;
+// module.exports = app;
+
+let port = process.env.PORT || 8000
+
+app.listen(port,()=>{
+    console.log(`Server is running at ${port}`)
+})
